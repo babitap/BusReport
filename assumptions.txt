@@ -1,0 +1,5 @@
+Color of Status is changing based on below rule: 
+# if deviation in route is greater than 200 then the status will be "Late" with "Red" color 
+# if deviation in route is less than 200 then the status will be "On time" with "Green" color 
+# if deviation in route is less than 0 then the status will be "Early" with "Blue" color 
+# if deviation in route is null then the status will be "Unknown" with "orange" color
