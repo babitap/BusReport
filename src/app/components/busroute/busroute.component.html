@@ -1,0 +1,29 @@
+<div class="container-s">
+  <div class="mid-center">
+    <h1>Bus Reports</h1>
+    <mat-accordion >
+      <div class="div-mat-s1" *ngFor="let item of busroutes |async;">
+        <form (ngSubmit) ="onSave()" #BusForm="ngForm">
+          <mat-expansion-panel [expanded]="false" (afterExpand)="selectedTitle = item.organisation">
+            <mat-expansion-panel-header class="disable_ripple">
+              <mat-panel-title>
+                {{item.organisation}} - {{item.date}}
+              </mat-panel-title>            
+            </mat-expansion-panel-header>
+            <app-busdetails [source]="{data:item.busData}"></app-busdetails>                  
+            <mat-form-field class= comments-s appearance="outline" >
+              <textarea matInput placeholder='Enter notes here' appearance="outline"  name="comments" [(ngModel)]="comments" 
+                cdkTextareaAutosize  
+                maxLength="1500"                  
+                #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="5"
+                cdkAutosizeMaxRows="25"></textarea>
+            </mat-form-field>                 
+            <button mat-raised-button class="btn-s" type="submit">Save</button>                 
+          </mat-expansion-panel>  
+        </form>                                          
+      </div>
+    </mat-accordion>
+  </div>
+</div> 
+

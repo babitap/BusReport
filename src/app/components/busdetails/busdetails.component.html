@@ -1,0 +1,30 @@
+<mat-table #table [dataSource]="dataSource">
+
+  <ng-container matColumnDef="busId">
+    <mat-header-cell class="cellstyle" *matHeaderCellDef> Bus ID </mat-header-cell>
+    <mat-cell class="cellstyle2" *matCellDef="let element"> {{element.busId}} </mat-cell>           
+  </ng-container>  
+
+  <ng-container  matColumnDef="routeVariant">
+    <mat-header-cell class="cellstyle" *matHeaderCellDef> Route Variant </mat-header-cell>
+    <mat-cell class="cellstyle2"  *matCellDef="let element" [innerHTML]="getelement(element)">
+        {{element.routeVariant }}
+        </mat-cell>
+  </ng-container> 
+
+  <ng-container matColumnDef="deviationFromTimetable">
+    <mat-header-cell class="cellstyle" *matHeaderCellDef> Status </mat-header-cell>
+    <mat-cell class="cellstyle2" *matCellDef="let element" [ngClass]="{               
+      'late' : element.deviationFromTimetable > 200,
+      'ontime' : element.deviationFromTimetable < 200,
+      'early' : element.deviationFromTimetable < 0,              
+      'unknown' : !element.deviationFromTimetable 
+    }"> {{element.deviationFromTimetable | status}} </mat-cell>           
+    
+  </ng-container>    
+  
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"     
+            (click)="selection.toggle(row)"></mat-row>                   
+</mat-table>
+

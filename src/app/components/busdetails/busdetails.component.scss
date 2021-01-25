@@ -1,0 +1,140 @@
+.panelheaderstyle1 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    padding-bottom:20px;
+  }
+  
+  .panelheaderstyle2 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;  
+  }  
+  
+  .divstyle2{
+    padding-top:20px;
+  }
+  
+  .panelbodystyle1 {
+    font-size: 20px;
+    text-align: justify;
+  }
+  
+  .cellstyle{
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+  }
+  
+  .cellstyle2 {
+    font-size: 18px;
+    /*font-weight: bold;*/
+    text-align: center;
+  }
+  .cellstyle3 {
+    font-size: 14px;     
+    color:white;  
+    height:5%;    
+  }
+  
+  .rowstyle2 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-left:25%;
+    margin-top:3%;
+    margin-right:25%;
+  }
+
+  .lblstyle2 {
+    padding-left:5px;
+    padding-right:5px;
+  }
+  
+  .lblstyle {
+    color:black;
+    font-family: sans-serif;
+    font-size:larger;    
+  }
+  
+  .highlight {
+    background: indigo;
+    color:white;
+  }
+  
+  .table-container {
+    margin-top: 10px;
+    max-height: 300px;
+    overflow:none ;
+    font-family: sans-serif;
+  }
+
+  .mat-column-packageid {    
+    max-width: 15% !important;    
+    text-align: center;  
+    max-height:10% !important;   
+  }
+  .mat-column-title {    
+    max-width: 45% !important;    
+    text-align: center;  
+    max-height:10% !important;
+    margin-left:15%;     
+  }
+  .mat-column-price {    
+    max-width: 30% !important;  
+    text-align: center;  
+    max-height:10% !important; 
+    margin-left:10%;   
+  }
+  .mat-column-action {    
+    max-width: 15% !important; 
+    max-height:10% !important;   
+  }
+.mat-table{
+  margin-left:15%;
+  margin-right:5%;
+  border-bottom: none;   
+}
+
+.mat-table{
+  margin-left:10%;
+  margin-right:10%;
+  border-bottom: none;  
+  display: inline;
+}
+
+.table-container {
+  margin-top: 10px;
+  max-height: 300px;
+  overflow:none ;
+  font-family: sans-serif;
+  background-color: transparent;
+}
+.mat-row {
+  min-height: 60px;
+}
+
+::ng-deep .mat-expansion-panel-body {  
+  padding: 0 !important;
+}
+
+table {
+    width: 100%;
+  }
+
+ .late{
+   color:red;
+ } 
+
+ .ontime{
+  color:green;
+}
+
+.early{
+  color:blue;
+}
+
+.unknown{
+  color:darkorange;
+}
